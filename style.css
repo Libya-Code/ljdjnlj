@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+body{
+   font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  
+}
+.body1{
+  margin: 0;
+  height: 100vh;
+  font-family: system-ui, sans-serif;
+
+  /* تدرج السماء */
+  background: linear-gradient(to bottom, #87ceeb, #b0e0e6);
+
+  /* الشمس */
+  position: relative;
+}
+.body1::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+  right: 80px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, #fff799, #ffd700 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 80px rgba(255, 223, 0, 0.5);
+}
+
+/* سحب بسيطة ومتناثرة */
+.body1::after {
+  content: '';
+  position:absolute;
+  width: 300px;
+  height: 80px;
+  top: 150px;
+  left: 50px;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 70%, transparent 100%);
+  border-radius: 50px;
+  transform: rotate(-10deg);
+  box-shadow: 100px 30px 0px rgba(255,255,255,0.6), 200px 50px 0px rgba(255,255,255,0.5);
+}
+.body0 {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0d1b2a, #1b263b); /* سماء ليلية داكنة */
+  position: relative;
+  overflow: hidden;
+  color: #f5f5dc;
+}
+
+/* القمر */
+.body0::before {
+  content: '';
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  width: 100px;
+  height: 100px;
+  z-index: -1;
+  background: radial-gradient(circle at 30% 30%, #2c2c29, #f5f5dc 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgba(253, 253, 150, 0.6);
+}
+
+/* سحب ليلية خفيفة */
+.body0::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 80px;
+  top: 200px;
+  left: 60px;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 70%, transparent 100%);
+  border-radius: 50px;
+  transform: rotate(-10deg);
+  box-shadow: 120px 40px 0px rgba(255,255,255,0.08), 250px 60px 0px rgba(255,255,255,0.05);
+}
+
+/* نجوم متناثرة */
+
+#weather{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 10px;
+    background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.425), rgba(230, 227, 227, 0.521));
+    border-radius: 10px ;
+    border: 1px solid #ffffff42;
+    box-shadow: #0b162242 0 0 10px;
+    margin: 20px;
+    padding: 10px;
+}
+
+#temperature_2m{
+    font-size: 50px;
+}
+#relative_humidity_2m,#wind_speed_10m,#alamatar{
+  font-size: 15px;
+  color: #535352;
+}
+img.emoji {
+    width: 90px;   /* العرض */
+    height: 90px;  /* الارتفاع */
+  }
+.box1{
+  width: auto;
+  padding: 10px;
+}
+.box2{
+  padding: 10px;
+}
+.box3{
+  padding: 10px;
+  border-right: 1px solid #c5c5bf;
+  color: #2c2c29;
+}
+.hourly_weather_changes{
+ padding-top: 5px ;
+ padding-bottom: 5px;
+  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.425), rgba(230, 227, 227, 0.521));
+  margin: 10px;
+  border-radius: 10px;
+}
+canvas{
+  margin: 10px;
+  background-color: #0d1b2aea;
+  border-radius: 10px;
+  
+}
