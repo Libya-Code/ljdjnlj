@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تجربه</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body id="body" dir="rtl">
+    <div id="sky"></div>
+    <div id="content">
+        <h1>حالة الطقس حالية</h1>
+        <h2></h2>
+        <div id="weather">
+            <div id="weather_code" class="box box1"></div>
+            <div id="temperature" class="box box2">
+
+            </div>
+            <div class="box box3">
+                <span id="alamatar">لأمطار: 10%</span>
+                <br>
+                <span id="relative_humidity_2m"></span>
+                <br>
+                <span id="wind_speed_10m"></span>
+               
+            </div>
+        </div>
+    </div>
+    <h2>متغيرات الطقس كل ساعة</h2>
+    <div id="hourly_weather_changes" class="hourly_weather_changes">
+        <canvas id="myChart" width="400" height="160"></canvas>
+    </div>
+    
+
+
+</body>
+<script src="weather.js"></script>
+
+</html>
